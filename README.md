@@ -1,6 +1,6 @@
 # Demonic Electron
 <p align="center">
-  # DEMONIC
+  <img src="https://i.ibb.co/W0sZJ6w/Logo-Makr-3-Hs-B6x.png" alt="Logo-Makr-3-Hs-B6x" border="0"/>
 </p>
 
 ## Description
