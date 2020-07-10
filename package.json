@@ -1,0 +1,67 @@
+{
+  "name": "demonic-electron",
+  "version": "0.1.0",
+  "author": "Rakhimov Kamran",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.8.4",
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-image-gallery": "^1.0.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1"
+  },
+
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+
+  "homepage": "./",
+  "main": "src/entryPoint.js",
+  "scripts": {
+    "start": "nf start -p 3000",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-start": "node src/reactEntryPoint",
+    "react-start": "BROWSER=none react-scripts start",
+    "pack": "build --dir",
+    "dist": "npm run build && build",
+    "postinstall": "install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.electron-with-create-react-app",
+    "win": {
+      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+    },
+    "directories": {
+      "buildResources": "public"
+    }
+  }
+
+}
