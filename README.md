@@ -1,6 +1,6 @@
 # Demonic Electron
 <p align="center">
-  <img alt='App Logo' src='https://i.ibb.co/2hRDJWL/budgety-logo.png'>
+  # DEMONIC
 </p>
 
 ## Description
