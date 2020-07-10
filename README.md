@@ -17,9 +17,10 @@
  - **SCSS**
  - **RawgAPI**
  
+ 
  ## Screenshot
 <p align="center">
-  <img alt='App Screenshot' src='https://i.ibb.co/34761VB/screenshot-localhost-3000-2020-07-08-12-19-04.png'>
+  <img alt='App Screenshot' src='https://i.ibb.co/HnL41R2/Screen-Shot-2020-07-09-at-9-00-54-PM.png'>
 </p>
 
 ## Author
