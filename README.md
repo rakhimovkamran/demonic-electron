@@ -19,7 +19,7 @@
  
  ## Screenshot
 <p align="center">
-  <img alt='App Screenshot' src='https://i.ibb.co/sHkG2Vd/screenshot-localhost-8081-2020-04-09-17-58-57.jpg'>
+  <img alt='App Screenshot' src='https://i.ibb.co/34761VB/screenshot-localhost-3000-2020-07-08-12-19-04.png'>
 </p>
 
 ## Author
