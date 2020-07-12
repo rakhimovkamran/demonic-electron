@@ -1,24 +1,23 @@
 // React
-import React from 'react';
-import { render } from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
 
 // Routing
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom'
 
 // Root Component
-import RootComponent from './root';
+import RootComponent from './root'
 
 // Styling
-import './assets/scss/index.scss';
-import './assets/css/tailwind.css';
+import './assets/scss/index.scss'
+import './assets/css/tailwind.css'
 
 // Application Wrapper
 const Application = (
-    <Router>
-        <RootComponent/>
-    </Router>
-);
+	<Router>
+		<RootComponent />
+	</Router>
+)
 
 // Render
-render ( Application, document.querySelector('#root'))
+render(Application, document.querySelector('#root'))

@@ -10,17 +10,15 @@ import GenreView from '../../views/Genre'
 import PlatformView from '../../views/Platform'
 
 export default [
+	// Static routes
+	{ path: '/', component: MainView },
 
-    // Static routes
-    { path : '/',                   component : MainView   },
-    
-    { path : '/discover/genres',    component : GenresView },
-    { path : '/discover/platforms', component : PlatformsView },
-    { path : '/search',             component : SearchView },
+	{ path: '/discover/genres', component: GenresView },
+	{ path: '/discover/platforms', component: PlatformsView },
+	{ path: '/search', component: SearchView },
 
-    // Dynamic routes
-    { path : '/game/:slug',  component : GameView },
-    { path : '/genre/:slug', component : GenreView },
-    { path : '/platform/:slug', component : PlatformView },
-    
+	// Dynamic routes
+	{ path: '/game/:slug', component: GameView },
+	{ path: '/genre/:slug', component: GenreView },
+	{ path: '/platform/:slug', component: PlatformView },
 ]

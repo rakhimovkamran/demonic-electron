@@ -9,72 +9,74 @@ import { GameCard } from '../../components/Cards'
 import { getGamesByPlatform, next } from '../../constants/API'
 
 class PlatformView extends Component {
-
 	state = {
-		next : '',
-		results : [],
-		isLoading : true
+		next: '', // Next link for fetching data
+		results: [], // Results array
+		isLoading: true, // Loading State
 	}
 
-	componentDidMount () {
+	componentDidMount() {
+		// Get slug from router params
+		const { slug } = this.props.match.params
 
-		const { slug } = this.props.match.params;
-		
+		// Call API Wrapper Method
 		getGamesByPlatform(parseInt(slug)).then(({ results, next }) =>
-			this.setState({ results, next, isLoading : false }))
-
+			// Put results into state
+			this.setState({ results, next, isLoading: false })
+		)
 	}
 
 	// Load More button action
-	loadMore () {
-
+	loadMore() {
+		// Call API Wrapper for fetch next results
 		next(this.state.next).then(({ results, next }) => {
-			let merged = [...this.state.results, ...results];
-			this.setState({ results : merged, next })
+			let merged = [...this.state.results, ...results]
+			this.setState({ results: merged, next })
 		})
-	
 	}
-    
-    render () {
 
-        const { slug } = this.props.match.params;
+	render() {
+		// Get slug from router params
+		const { slug } = this.props.match.params
 
-        return (
-            <Layout>
+		return (
+			<Layout>
+				{this.state.isLoading === false ? (
+					/* Show if game has been loaded */
+					<div className='pl-10 pt-5 w-full h-auto'>
+						<h1 className='uppercase text-5xl text-gray-100 mb-4'>
+							{slug.replace(/[0-9]/g, '').replace(/-/g, ' ')}
+						</h1>
 
-				{ this.state.isLoading === false ?
-
-					<div className="pl-10 pt-5 w-full h-auto">
-						<h1 className = 'uppercase text-5xl text-gray-100 mb-4'>{slug.replace(/[0-9]/g, '').replace(/-/g, ' ')}</h1>
-
-						<div className="flex w-full flex-wrap mb-4 -mx-2">
-
-                	        { this.state.results.map( ( item, index ) => (
-						    		<GameCard 
-						    			key = { index }
-						    			name = { item.name }
-						    			released = { item.released }
-						    			rating = { item.rating }
-						    			slug = { item.slug }
-						    			poster = { item.background_image } />
-						    ))}
-
+						<div className='flex w-full flex-wrap mb-4 -mx-2'>
+							{this.state.results.map((item, index) => (
+								/* Show fetched results here */
+								<GameCard
+									key={index}
+									name={item.name}
+									released={item.released}
+									rating={item.rating}
+									slug={item.slug}
+									poster={item.background_image}
+								/>
+							))}
 						</div>
 
-						<div className="w-full text-center p-4 mb-4">
-							<button 
-								onClick = { () => this.loadMore() } 
-								className = 'w-32 p-4 bg-gray-900 text-gray-200 rounded-full shadow-lg' >Load More</button>
+						<div className='w-full text-center p-4 mb-4'>
+							<button
+								onClick={() => this.loadMore()}
+								className='w-32 p-4 bg-gray-900 text-gray-200 rounded-full shadow-lg'>
+								Load More
+							</button>
 						</div>
-
-
-					</div> : <Loader/>
-				}
+					</div>
+				) : (
+					/* Show if game data is loading */
+					<Loader />
+				)}
 			</Layout>
-        )
-    }
-
+		)
+	}
 }
-
 
 export default PlatformView
