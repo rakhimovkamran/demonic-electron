@@ -16,13 +16,13 @@ Demonic is a game client. You can see the description of the games, screenshots,
  
 ## Tech Stack
 
- - **ElectronJS - Software Framework**
- - **ElectronJS Builder - Build tools **
- - **ReactJS - Framework**
- - **TailwindCSS - Utility First CSS Framework**
- - **React Router DOM - Routing for ReactJS Framework**
- - **SCSS - CSS Preprocessor**
- - **FetchAPI**
+ - **ElectronJS (Software Framework)**
+ - **ElectronJS Builder (Build tools)**
+ - **ReactJS (Framework)**
+ - **TailwindCSS (Utility First CSS Framework)**
+ - **React Router DOM (Routing for ReactJS Framework)**
+ - **SCSS (CSS Preprocessor)**
+ - **FetchAPI (Built-in API For fetching data)**
  
  ## Screenshot
 <p align="center">
